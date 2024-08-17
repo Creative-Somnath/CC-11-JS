@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Sum & Avg</title>
+</head>
+<body>
+    <h2>Terminated when 0 is entered</h2>
+    <input type="button" onclick="action()" value="Calculate">
+    <script>
+        function action() {
+            let sum = 0;
+            let count = 0;
+            while (true) {
+                let x = prompt("Enter number to Add : ");
+                if (isNaN(x) || x == "") {
+                    alert("This is not a Number");
+                }
+                else if (x < 0) {
+                    alert("This Number is Not a Positive Number");
+                }
+                else if (x == 0) {
+                    if (count < 2) {
+                        alert("You have entered zero");
+                        alert("At least two numbers are required to display result");
+                        continue;
+                    }
+                    else {
+                        alert("You have entered zero");
+                        break;
+                    }
+                }
+                else {
+                    sum += Number(x);
+                    count++;
+                }
+            }
+            let av = sum / count;
+            document.write("Sum is: " + sum + "<br>Average is: " + av);
+        }
+    </script>
+</body>
+</html>

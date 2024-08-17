@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Number Table Generator</title>
+</head>
+
+<body>
+    <h1>Table Generator From 5 to 15</h1>
+    <button id="btn" onclick="func()">Generate Table</button>
+    <p id="result"></p>
+    <script>
+        function func(){
+        var tabl = '<table border="2"><tr><td>Number</td><td>Square</td><td>Cube</td></tr>';
+        for (let i = 5; i <= 15; i++) {
+            tabl += '<tr><td>' + i + '</td><td>' + i ** 2 + '</td><td>' + i ** 3 + '</td></tr>';
+        }
+        tabl += '</table>';
+        document.getElementById("result").innerHTML=tabl;
+    }
+    </script>
+</body>
+
+</html>

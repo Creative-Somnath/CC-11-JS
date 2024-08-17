@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Sum and Average</title>
+    <script>
+        function func() {
+            let sum = 0;
+            let flag = 1,n;
+            do {
+                n = Number(prompt("Enter the total number of inputs: "));
+                if (n > 1 && !isNaN(n)) {
+                    flag = 0;
+                } else {
+                    alert("Number of inputs should be a positive integer greater than one ");
+                }
+            } while (flag);
+            for (let i = 0; i < n;) {
+                let x = Number(prompt("Enter a positive number"));
+                if (isNaN(x)) {
+                    alert("This is not a number.");
+                } else if (x <= 0) {
+                    alert("This number is not a positive number.");
+                } else if (x % 10) {
+                    alert("This number is not terminated by zero.");
+                }
+                else {
+                    sum += x;
+                    i++;
+                }
+            }
+            if (n > 0) {
+                let average = sum / n;
+
+                document.getElementById("result").innerHTML = "Sum of entered positive numbers is: " + sum + "<br>Average of entered positive numbers is: " + average.toFixed(2);
+            } else {
+                alert("No valid positive numbers were entered.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>Sum and Average (Terminated By Zero)</h3>
+    <input type="button" onclick="func()" value="Calculate">
+    <p id="result"> </p>
+</body>
+</html>

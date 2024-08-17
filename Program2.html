@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Addition Operation</title>
+</head>
+
+<body>
+    <h3><u>Addition of 2 numbers</u></h3>
+
+    <script>
+        function Addition() {
+            let num1, num2;
+            let x, y, z;
+
+            while (true) {
+                num1 = prompt("Enter first number:");
+
+                if (num1 == "" || isNaN(num1)) {
+                    alert("Empty Field or Not a valid number, Insert number properly");
+                    break;
+                }
+                else {
+                    x = Number(num1);
+                }
+
+                num2 = prompt("Enter second number:");
+
+                if (num2 == "" || isNaN(num2)) {
+                    alert("Empty Field or Not a valid number, Insert number properly");
+                    break;
+
+                }
+                else {
+                    y = Number(num2);
+                    z = x + y;
+                    document.getElementById("result").innerHTML = "Sum is " + z;
+                    break;
+                }
+
+            }
+
+        }               
+    </script>
+    <p id="result"></p>
+    <button onclick="Addition()">ADD</button>
+</body>
+
+</html>
